@@ -6,3 +6,19 @@
 //   behavior: 'smooth',
 // });
 // Кнопка должна рендерится только тогда, когда есть какие-то загруженные изобаржения. Если массив изображений пуст, кнопка не рендерится.
+
+import React from "react";
+import PropTypes from "prop-types";
+
+const Button = ({ onBtnClick, text }) => (
+  <button className="Button" id="blink7" type="button" onClick={onBtnClick}>
+    {text}
+  </button>
+);
+
+Button.propTypes = {
+  onBtnClick: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
+};
+
+export default Button;
